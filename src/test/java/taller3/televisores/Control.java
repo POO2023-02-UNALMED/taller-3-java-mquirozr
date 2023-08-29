@@ -8,6 +8,8 @@ public class Control {
         tv.setControl(this);
     }
 
+    // Getters and setters for tv
+
     public void turnOn() {
         if (tv != null) {
             tv.turnOn();
@@ -21,46 +23,26 @@ public class Control {
     }
 
     public void canalUp() {
-        if (tv != null) {
+        if (tv != null && tv.getEstado()) {
             tv.canalUp();
         }
     }
 
     public void canalDown() {
-        if (tv != null) {
+        if (tv != null && tv.getEstado()) {
             tv.canalDown();
         }
     }
 
     public void volumenUp() {
-        if (tv != null) {
+        if (tv != null && tv.getEstado()) {
             tv.volumenUp();
         }
     }
 
     public void volumenDown() {
-        if (tv != null) {
+        if (tv != null && tv.getEstado()) {
             tv.volumenDown();
         }
-    }
-
-    public void setCanal(int canal) {
-        if (tv != null) {
-            tv.setCanal(canal);
-        }
-    }
-
-    public void setVolumen(int volumen) {
-        if (tv != null) {
-            tv.setVolumen(volumen);
-        }
-    }
-
-    public TV getTv() {
-        return tv;
-    }
-
-    public void setTv(TV tv) {
-        this.tv = tv;
     }
 }
